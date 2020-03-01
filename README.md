@@ -1,17 +1,17 @@
 # ArduinoTutorial
 
-### Arduino Hands-on Introduction Workshop
+### Hands-on ESP32 Tutorial
 
-This workshop created by:
+This tutorial created by *Sudhu Tewari 2020* 
+from materials originally created by:
 Michael Shiloh and Judy Castro for *Teach Me To Make*
 
-Revised by Sudhu Tewari 2020
 
-##### Arduino Examples - coming soon!
+##### Tutorial overview
 
-The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with Arduino and can explore further on your own.
+The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with your ESP32 (specifically [Adafruit's Huzzah32](https://www.adafruit.com/product/3405)) and the Arduino IDE and can explore further on your own.
 
-We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to Arduino and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
+We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
 
 #### Additional Resources
 Lady Ada's [Learn Arduino](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0?view=all) lessons are great. The [tour](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0?view=all#take-a-tour) of Arduino architecture is particularly useful for understanding Arduino.
