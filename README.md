@@ -10,11 +10,6 @@ The workshop will focus on getting you up and running with Arduino quickly, so t
 
 We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
 
-#### Start Here
-Adafruit's HUZZAH32 - ESP32 Feather [Overview and Get Started Tutorial]](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
- - download as [PDF](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf?timestamp=1583087040)
-
-
 #### Additional Resources
 What is Arduino anyway?
 	Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
@@ -23,28 +18,25 @@ What is ESP32?
 	Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf) 
 	from [espressif](https://www.espressif.com/en/products/hardware/esp32/overview)
 
-
-#### Install Arduino IDE
-Arduino software (IDE) runs on Windows, Mac OSX, and Linux. Please download and install the (free) Arduino software prior to the workshop from http://arduino.cc/en/Main/Software.  
-
-Instructions at http://arduino.cc/en/Guide/HomePage  
-
-#### Install ESP32 drivers
-https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-
-#### Add ESP32 to Arduino IDE Boards Manager
-- Random Nerd Tutorials [Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
-- Espressif's github [arduino-esp32 install instructions](https://github.com/espressif/arduino-esp32#installation-instructions)
-
-	ESP32 URL: https://dl.espressif.com/dl/package_esp32_index.json - for Boards Manager install
-	- Board Manager: Tools > Board > Boards Manager
-	- search for ESP32 - install ESP32 by Espressif Systems
-
-
+#### Start Here
+- Read: Adafruit's HUZZAH32 - ESP32 Feather [Overview and Get Started Tutorial](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
+  - download as [PDF](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf?timestamp=1583087040)
+- Install Arduino IDE
+  - Arduino software (IDE) runs on Windows, Mac OSX, and Linux. 
+  - Please download and install the (free) Arduino software prior to the workshop from http://arduino.cc/en/Main/Software.  
+    - Instructions at http://arduino.cc/en/Guide/HomePage  
+- Install ESP32 drivers: 
+  - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+- Add ESP32 to Arduino IDE Boards Manager
+  - Use one of the following (whichever suits you best):
+    - Random Nerd Tutorials [Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+    - Espressif's github [arduino-esp32 install instructions](https://github.com/espressif/arduino-esp32#installation-instructions)
+    - ESP32 URL: https://dl.espressif.com/dl/package_esp32_index.json - for Boards Manager install
+      - Board Manager: Tools > Board > Boards Manager
+      - search for ESP32 - install ESP32 by Espressif Systems
+      
 If you have questions prior to or after the workshop please contact Sudhu: loopstick@hotmail.com
 
-#### At the Workshop
- - Please interrupt any time with questions.
 
 ### First steps: Verifying correct installation
 
