@@ -44,12 +44,12 @@ What is ESP32?
 2. Open Arduino software (IDE)
 
 3. Select _Tools -> Board_
-   - You have an Uno.
+   - You have a Adafruit ESP32 Feather.
 
 4. Select _Tools -> Serial Port_
    - Windows? Chose the largest COM number
      - No COMs? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-   - Mac OS X? Chose either usbmodem
+   - Mac OS X? Chose /dev/cu.SLAB_USDtoUART
      - No usbmodem? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
    - Linux? There is only one choice
 
@@ -57,12 +57,13 @@ What is ESP32?
    - Click “Upload”
    - Look for errors in the bottom window of the program
      - Errors? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-   - Look for the amber LED on your Arduino to be blinking
+   - Look for an amber LED blinking rapidly and a red LED blinking slowly on the other side of the USB connector 
      - No blinking? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
+    
 
 
-### Is this thing on?
-Copy the code below into a new Arduino sketch or download and open the example sketch: [HelloWorld.ino](https://github.com/loopstick/ArduinoTutorial/blob/master/examples/HelloWorld/HelloWorld/HelloWorld.ino)
+### Is this thing really on?
+Copy the code below into a new Arduino sketch or download and open this example sketch: [HelloWorld.ino](/examples/HelloWorld/HelloWorld.ino)
 
 
 ```cpp
