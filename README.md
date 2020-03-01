@@ -1,40 +1,42 @@
-# ArduinoTutorial
+### Hands-on ESP32 Tutorial
 
-### Arduino Hands-on Introduction Workshop
+**This tutorial created by Sudhu Tewari 2020** 
+ - from materials originally created by: Michael Shiloh and Judy Castro for *Teach Me To Make*
 
-This workshop created by:
-Michael Shiloh and Judy Castro for *Teach Me To Make*
+#### Tutorial overview
+The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with your ESP32 (specifically [Adafruit's Huzzah32](https://www.adafruit.com/product/3405)) and the Arduino IDE and can explore further on your own.
 
-Revised by Sudhu Tewari 2020
-
-##### Arduino Examples - coming soon!
-
-The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with Arduino and can explore further on your own.
-
-We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to Arduino and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
+We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
 
 #### Additional Resources
-Lady Ada's [Learn Arduino](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0?view=all) lessons are great. The [tour](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0?view=all#take-a-tour) of Arduino architecture is particularly useful for understanding Arduino.
-
-#### Before the Workshop
-Arduino software (IDE) runs on Windows, Mac OSX, and Linux. Please download the (free) Arduino software prior to the workshop from http://arduino.cc/en/Main/Software, and install as much as you can.  
-Instructions at http://arduino.cc/en/Guide/HomePage  
-Please bring your laptop with the software installed to the workshop.
-
-An Arduino kit will be provided for use during the workshop or you may bring your own.
-
 What is Arduino anyway?
-	Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
+ - Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
 
-If you have questions prior to or after the workshop please contact Sudhu: loopstick@hotmail.com
+What is ESP32? 
+ - Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf) 
+	from [espressif](https://www.espressif.com/en/products/hardware/esp32/overview)
 
-#### At the Workshop
- - Please interrupt any time with questions.
+### Start Here
+- Read: Adafruit's HUZZAH32 - ESP32 Feather [Overview and Get Started Tutorial](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
+  - download as [PDF](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf?timestamp=1583087040)
+- Install Arduino IDE
+  - Arduino software (IDE) runs on Windows, Mac OSX, and Linux. 
+  - Please download and install the (free) Arduino software prior to the workshop from http://arduino.cc/en/Main/Software.  
+    - Instructions at http://arduino.cc/en/Guide/HomePage  
+- Install ESP32 drivers: 
+  - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+- Add ESP32 to Arduino IDE Boards Manager
+  - Use one of the following (whichever suits you best):
+    - Random Nerd Tutorials [Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+    - Espressif's github [arduino-esp32 install instructions](https://github.com/espressif/arduino-esp32#installation-instructions)
+    - ESP32 URL: https://dl.espressif.com/dl/package_esp32_index.json - for Boards Manager install
+      - Board Manager: Tools > Board > Boards Manager
+      - search for ESP32 - install ESP32 by Espressif Systems
 
-### First steps: Verifying correct installation
-All of this is in the Arduino Getting Started guide for your operating system. [https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage).
 
-1. Connect Arduino via USB cable
+#### First steps: Verifying correct installation
+
+1. Connect ESP32 via USB cable
    - Windows? Might see “New Hardware Discovered” and later might see “New Hardware Ready for Use”.
    - Mac OS X? Might see “New Network Interface Found”. Click “Network Preferences…”,  click “Apply”, and when it finishes, click “Close”. It doesn’t matter if the configuration fails.
    - Linux? Nothing to do here
@@ -42,12 +44,12 @@ All of this is in the Arduino Getting Started guide for your operating system.
 2. Open Arduino software (IDE)
 
 3. Select _Tools -> Board_
-   - You have an Uno.
+   - You have a Adafruit ESP32 Feather.
 
 4. Select _Tools -> Serial Port_
    - Windows? Chose the largest COM number
      - No COMs? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-   - Mac OS X? Chose either usbmodem
+   - Mac OS X? Chose /dev/cu.SLAB_USDtoUART
      - No usbmodem? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
    - Linux? There is only one choice
 
@@ -55,12 +57,13 @@ All of this is in the Arduino Getting Started guide for your operating system.
    - Click “Upload”
    - Look for errors in the bottom window of the program
      - Errors? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-   - Look for the amber LED on your Arduino to be blinking
+   - Look for an amber LED blinking rapidly and a red LED blinking slowly on the other side of the USB connector 
      - No blinking? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
+    
 
 
-### Is this thing on?
-Copy the code below into a new Arduino sketch or download and open the example sketch: [HelloWorld.ino](https://github.com/loopstick/ArduinoTutorial/blob/master/examples/HelloWorld/HelloWorld/HelloWorld.ino)
+### Is this thing really on?
+Copy the code below into a new Arduino sketch or download and open this example sketch: [HelloWorld.ino](/examples/HelloWorld/HelloWorld.ino)
 
 
 ```cpp
