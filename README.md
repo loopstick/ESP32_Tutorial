@@ -1,24 +1,22 @@
 ### Hands-on ESP32 Tutorial
 
 **This tutorial created by Sudhu Tewari 2020** 
+ - from materials originally created by: Michael Shiloh and Judy Castro for *Teach Me To Make*
 
-from materials originally created by: Michael Shiloh and Judy Castro for *Teach Me To Make*
-
-##### Tutorial overview
-
+#### Tutorial overview
 The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with your ESP32 (specifically [Adafruit's Huzzah32](https://www.adafruit.com/product/3405)) and the Arduino IDE and can explore further on your own.
 
 We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
 
 #### Additional Resources
 What is Arduino anyway?
-	Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
+ - Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
 
 What is ESP32? 
-	Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf) 
+ - Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf) 
 	from [espressif](https://www.espressif.com/en/products/hardware/esp32/overview)
 
-#### Start Here
+### Start Here
 - Read: Adafruit's HUZZAH32 - ESP32 Feather [Overview and Get Started Tutorial](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
   - download as [PDF](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf?timestamp=1583087040)
 - Install Arduino IDE
@@ -34,11 +32,9 @@ What is ESP32?
     - ESP32 URL: https://dl.espressif.com/dl/package_esp32_index.json - for Boards Manager install
       - Board Manager: Tools > Board > Boards Manager
       - search for ESP32 - install ESP32 by Espressif Systems
-      
-If you have questions prior to or after the workshop please contact Sudhu: loopstick@hotmail.com
 
 
-### First steps: Verifying correct installation
+#### First steps: Verifying correct installation
 
 1. Connect ESP32 via USB cable
    - Windows? Might see “New Hardware Discovered” and later might see “New Hardware Ready for Use”.
