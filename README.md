@@ -205,15 +205,14 @@ In order to see this message you need to open the _Serial Monitor_ by clicking
 
 Now that we've got sensor data coming in (as a range of values) what can we do with the data?
 
-ESP32 can measure varying voltage levels between 0 V and 3.3 V.
-
-The voltage measured is assigned to a value between 0 and 4095, in which 0 V corresponds to 0, and 3.3 V corresponds to 4095. Any voltage between 0 V and 3.3 V will be given the corresponding value.
-
-We could do some math to calculate the voltage we're measuring:
+- ESP32 can measure varying voltage levels between 0 V and 3.3 V.
+  - The voltage measured is assigned to a value between 0 and 4095
+    - 0V corresponds to 0, and 3.3V corresponds to 4095.
+    - Any voltage between 0 V and 3.3 V will be given the corresponding value.
+  - We could do some math to calculate the voltage we're measuring:
 _File->Examples->Basics->AnalogReadVoltage_
-
-  - _we'll need to do some different math to re-configure the stock Arduino example for ESP32_
-  - Arduino inputs range from 0-1024
+    - _we'll need to do some different math to re-configure the stock Arduino example for ESP32_
+      - Arduino inputs range from 0-1024
 
 That's nice, but what if we want to use the sensor data to control some kind of physical reaction (light, heat, motion) to the data?
 
@@ -224,12 +223,14 @@ Use an IF statement to turn your LED on and off according to the data coming fro
 
 
 
+
+
 What other kinds of sensors are there?
 - [Sensor workshop at ITP](https://itp.nyu.edu/physcomp/lessons/sensors-the-basics/)
 
 
-
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
+
 
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
