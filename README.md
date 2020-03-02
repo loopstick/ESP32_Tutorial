@@ -300,6 +300,8 @@ What other kinds of sensors are there?
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
 
+### analogWrite(): Controlling speed or brightness
+If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess ~analogWrite()~ might do?
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
 
@@ -366,9 +368,6 @@ void loop(){
 
 
 
-
-### analogWrite(): Controlling speed or brightness
-If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess analogWrite() might do?
 
 Move the LED to pin 9:
 
