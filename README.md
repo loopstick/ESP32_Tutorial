@@ -326,7 +326,7 @@ How does it know to start fading down when it reaches the maximum value?
 
 Why did I ask you to move the LED to pin 9?
 	It turns out analogWrite() only works on certain pins which are capable of [PWM](https://www.arduino.cc/en/tutorial/PWM) output: 3, 5, 6, 9, 10, and 11.
-	see the[Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board)for more info
+	see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
 
 
 ### Sensor ranges, calibration, and mapping
