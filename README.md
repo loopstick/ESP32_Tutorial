@@ -296,6 +296,19 @@ Use an IF statement to turn your LED on and off according to the data coming fro
 What other kinds of sensors are there?
 - [Sensor workshop at ITP](https://itp.nyu.edu/physcomp/lessons/sensors-the-basics/)
 
+**IMPORTANT NOTE:**
+- When looking for sensors to use
+  - be aware that ESP32 is a 3.3V system.
+  - Many microcontrollers and sensors are made to run on 5v
+    - **5V WILL KILL YOUR ESP32!**
+  - It is possible to convert 5V sensor outputs to 3.3v
+    - [How to Level Shift 5V to 3.3V](https://randomnerdtutorials.com/how-to-level-shift-5v-to-3-3v/)
+  - It is even easier to use 3.3V compatible sensors
+    - Try searching on Adafruit for [“3.3v sensor”](https://www.adafruit.com/?q=3.3v%20sensor&p=5)
+
+
+More on Sensors in the near future
+
 
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
