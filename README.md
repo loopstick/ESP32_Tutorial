@@ -141,9 +141,9 @@ In order to connect inputs or outputs to your microcontroller you need to know w
 
  - [Huzzah32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)
 
-![feather_pinouttop](feather_pinouttop.jpg)
+![feather_pinouttop](/images/feather_pinouttop.jpg)
 
-![feather_pinoutbot](feather_pinoutbot.jpg)
+![feather_pinoutbot](/images/feather_pinoutbot.jpg)
 
 ![adafruithuzzah32pin](/images/adafruithuzzah32pin.jpg)
 
