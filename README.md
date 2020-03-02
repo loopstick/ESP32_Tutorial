@@ -213,7 +213,7 @@ That's nice, but what if we want to use the sensor data to control some kind of 
 ##### Exercise:
 Use an IF statement to turn your LED on and off according to the data coming from the LDR.
 
-see [/examples/AnalogRead_If.ino](/examples/AnalogRead_If.ino)
+see [/examples/AnalogRead_If.ino](/examples/AnalogRead_If/AnalogRead_If.ino)
 
 
 
