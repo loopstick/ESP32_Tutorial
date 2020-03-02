@@ -137,12 +137,13 @@ some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/e
 
 
 ### Connecting to your Microcontroller - Pinouts
-[Huzzah32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)
+In order to connect inputs or outputs to your microcontroller you need to know where the GPIO (general-purpose input/output) pins are!
+
+ - [Huzzah32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)
 
 ![feather_pinouttop](feather_pinouttop.jpg)
 
 ![feather_pinoutbot](feather_pinoutbot.jpg)
-
 
 ![adafruithuzzah32pin](/images/adafruithuzzah32pin.jpg)
 
