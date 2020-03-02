@@ -132,6 +132,9 @@ void loop() {
 ```
 some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/en/tutorial/sketch)
 
+##### Exercise:
+- combine HelloWorld and Blink to make a program that shows it's working with physical and digital output.
+
 
 #### Using a solderless Breadboard to connect Arduino to other things (LEDs, motors, speakers, sensors, etc.)
 
@@ -174,13 +177,13 @@ Use the Blink sketch: _File -> Examples -> Basics -> Blink_
 Does the LED on the breadboard blink?
 		(think about why)
 
-### Exercise 1:
+##### Exercise:
 Move LED to a different pin (e.g. pin 12).
 	See if you can figure out how to do this on your own
 
 Now the LED won’t blink until you change the program, since the program is only turning pin 13 on and off. Change the program to control pin 8.
 
-### Exercise 2:
+##### Exercise:
 If you changed the program to control only pin 8, then the built-in LED on pin 13 is no longer blinking. Can you change the program to make them both blink?
 
 Are we limited to LEDs? No; we could replace the LED (and its resistor) with any other suitable device, with some considerations. We’ll learn more about this later.
@@ -205,16 +208,26 @@ Now that we've got sensor data coming in (as a range of values) what can we do w
 We could do some math to calculate the voltage we're measuring:
 _File->Examples->Basics->AnalogReadVoltage_
 
-What other kinds of sensors are there?
-- [Sensor workshop at ITP](https://itp.nyu.edu/physcomp/lessons/sensors-the-basics/),
-
 That's nice, but what if we want to use the sensor data to control some kind of physical reaction (light, heat, motion) to the data?
 
-Let's shift our focus, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
+##### Exercise:
+Use an IF statement to turn your LED on and off according to the data coming from the LDR.
+
+see [/examples/AnalogRead_If.ino](/examples/AnalogRead_If.ino)
 
 
 
+What other kinds of sensors are there?
+- [Sensor workshop at ITP](https://itp.nyu.edu/physcomp/lessons/sensors-the-basics/)
 
+
+
+Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
+
+
+### Analog Output - PWM - Major Difference between Arduino and ESP32
+- ESP32 can output PWM on ANY pin.
+  - ESP32 uses a different function to call PWM output
 
 #### analogWrite(): Controlling speed or brightness
 If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess analogWrite() might do?
