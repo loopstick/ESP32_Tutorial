@@ -247,8 +247,11 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
 
 ##### Exercises:
 - Write an IF statement to turn the LED on when the button is pushed.
-- Write an IF statement to toggle the LED on when the button is pushed.
-- Write an IF statement to toggle the LED on when the button is pushed a certain number of times.
+  - [DigitalRead_LED](/examples/DigitalRead_LED/DigitalRead_LED.ino)
+- Write an IF statement to toggle the LED when the button is pushed a certain number of times.
+  - [DigitalRead_Toggle](/examples/DigitalRead_Toggle/DigitalRead_Toggle.ino)
+
+
 
 
 
