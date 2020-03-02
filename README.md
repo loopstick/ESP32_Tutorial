@@ -214,10 +214,12 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
   ![ESP32_BTN_LED](/images/ESP32_BTN_LED.png)
 
   ```cpp
+  /*
   DigitalReadSerial
   Reads a digital input on pin A0, prints the result to the Serial Monitor
   This example code is in the public domain.
   http://www.arduino.cc/en/Tutorial/DigitalReadSerial
+  */
 
 	// A0 has the pushbutton attached to it. Give it a name:
 	int pushButton = A0;
