@@ -136,8 +136,13 @@ some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/e
 - combine HelloWorld and Blink to make a program that shows it's working with physical and digital output.
 
 
-#### Connecting to your Microcontroller - Pinouts
+### Connecting to your Microcontroller - Pinouts
 [Huzzah32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)
+
+![feather_pinouttop](feather_pinouttop.jpg)
+
+![feather_pinoutbot](feather_pinoutbot.jpg)
+
 
 ![adafruithuzzah32pin](/images/adafruithuzzah32pin.jpg)
 
@@ -145,7 +150,7 @@ some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/e
 
 
 
-#### Using a solderless Breadboard to connect your microcontroller to other things (LEDs, motors, speakers, sensors, etc.)
+### Using a solderless Breadboard to connect your microcontroller to other things (LEDs, motors, speakers, sensors, etc.)
 
 The Solderless Breadboard
 - [How to use a Breadboard tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard)
