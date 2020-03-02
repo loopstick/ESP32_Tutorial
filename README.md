@@ -1,6 +1,6 @@
 ### Hands-on ESP32 Tutorial
 
-**This tutorial created by Sudhu Tewari 2020** 
+**This tutorial created by Sudhu Tewari 2020**
  - from materials originally created by: Michael Shiloh and Judy Castro for *Teach Me To Make*
 
 #### Tutorial overview
@@ -12,18 +12,18 @@ We will cover how to install Arduino on your laptop; how to understand, modify, 
 What is Arduino anyway?
  - Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
 
-What is ESP32? 
- - Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf) 
+What is ESP32?
+ - Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
 	from [espressif](https://www.espressif.com/en/products/hardware/esp32/overview)
 
 ### Start Here
 - Read: Adafruit's HUZZAH32 - ESP32 Feather [Overview and Get Started Tutorial](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
   - download as [PDF](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf?timestamp=1583087040)
 - Install Arduino IDE
-  - Arduino software (IDE) runs on Windows, Mac OSX, and Linux. 
+  - Arduino software (IDE) runs on Windows, Mac OSX, and Linux.
   - Please download and install the (free) Arduino software prior to the workshop from http://arduino.cc/en/Main/Software.  
     - Instructions at http://arduino.cc/en/Guide/HomePage  
-- Install ESP32 drivers: 
+- Install ESP32 drivers:
   - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 - Add ESP32 to Arduino IDE Boards Manager
   - Use one of the following (whichever suits you best):
@@ -57,9 +57,9 @@ What is ESP32?
    - Click “Upload”
    - Look for errors in the bottom window of the program
      - Errors? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-   - Look for an amber LED blinking rapidly and a red LED blinking slowly on the other side of the USB connector 
+   - Look for an amber LED blinking rapidly and a red LED blinking slowly on the other side of the USB connector
      - No blinking? Raise your hand for help or visit [troubleshooting](http://arduino.cc/en/Guide/Troubleshooting)
-    
+
 
 
 ### Is this thing really on?
@@ -91,12 +91,16 @@ delay(1000);
 The _Serial_ commands allow Arduino to send a message to your laptop. In order to see this message you need to open the _Serial Monitor_ by clicking on the magnifying glass near the top right corner.
 
 a little code anatomy:
-The [setup()](https://www.arduino.cc/reference/en/language/structure/sketch/setup/) function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup() function will only run once, after each powerup or reset of the Arduino board.
+- the [setup()](https://www.arduino.cc/reference/en/language/structure/sketch/setup/) function is called when a sketch starts.
+  - Use it to initialize variables, pin modes, start using libraries, etc.
+  - The setup() function will only run once, after each powerup or reset of the Arduino board.
 
-The [loop()](https://www.arduino.cc/reference/en/language/structure/sketch/loop/) After creating a setup() function, which initializes and sets the initial values, the loop() function does precisely what its name suggests, and _loops_ consecutively through your list of instructions to control the Arduino.
+- the [loop()](https://www.arduino.cc/reference/en/language/structure/sketch/loop/) function does precisely what its name suggests, and _loops_ consecutively through your list of instructions to control the Arduino.
+  - Arduino only executes one instruction at a time
 
 
-More on the specific functions and variables soon! Let's make something happen in the real world first.
+More on specific functions and variables soon! Let's make something happen in the real world first.
+
 
 ### How to use Arduino to turn something ON and OFF
 How does the program (sketch) do this? (all described in the [Blink tutorial](http://arduino.cc/en/Tutorial/Blink))
@@ -140,19 +144,18 @@ The Solderless Breadboard (SparkFun [tutorial:](https://learn.sparkfun.com/tutor
 [Breadboard connections](http://wiring.org.co/learning/tutorials/breadboard/)
 
 
-Use it to add an external LED. LEDs must always be used with resistors so they don’t burn out. The resistor value can be anywhere from 220 ohm to 1k ohm. The lower the resistance, the brighter the light:
+Use it to add an external LED. LEDs must always be used with resistors so they don’t burn out. The resistor value can be anywhere from 100 ohm to 1k ohm. The lower the resistance, the brighter the light.
+Evil Mad Scientist explains it well [here](https://www.evilmadscientist.com/2012/resistors-for-leds/)
 
 Here’s a picture showing how to connect the LED and resistor on the breadboard:
 
-![LED_Resistor Pic](/images/LED_Breadboard2.jpg)
+![LED_Breadboard2](/images/LED_Breadboard2.jpg)
 
 Here is another view of this circuit:
 
-![Fritzing: LED resistor pic](/images/2-Blink-an-LED_SMALL.jpg)
+![ESP32_LED_01](/images/ESP32_LED_01.png)
 
-And here is a schematic of this circuit:
 
-![Fritzing: LED resistor schematic](/images/Arduino_LED_Resistor_schem.jpg)
 
 Use the Blink sketch: _File -> Examples -> Basics -> Blink_
 	Does your LED blink?
@@ -178,10 +181,10 @@ The LDR indicates the amount of light by changing its resistance, but Arduino ca
 Open and upload this sketch:
 _File->Examples->Basics->AnalogReadSerial_
 
-How do you know if anything is working? Arduino might be reading the sensor, but is it telling you anything? 
+How do you know if anything is working? Arduino might be reading the sensor, but is it telling you anything?
 
 Arduino is connected to your computer, so they can communicate - just like we did earlier with Hello World, but now your Ardunio is sending sensor DATA!
- - this line:	```cpp Serial.println(sensorValue);``` allows Arduino to send a message to your laptop. 
+ - this line:	```cpp Serial.println(sensorValue);``` allows Arduino to send a message to your laptop.
 In order to see this message you need to open the _Serial Monitor_ by clicking on the magnifying glass near the top right corner. Read the Arduino [AnalogRead tutorial](http://arduino.cc/en/Tutorial/AnalogReadSerial) to find out more. Also see _File->Examples->Communication_ for more examples of other types of Serial communication).
 
 Now that we've got sensor data coming in (as a range of values) what can we do with the data?
@@ -194,7 +197,7 @@ What other kinds of sensors are there?
 
 That's nice, but what if we want to use the sensor data to control some kind of physical reaction (light, heat, motion) to the data?
 
-Let's shift our focus, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output. 
+Let's shift our focus, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
 
 
@@ -241,7 +244,7 @@ What else can _analogWrite()_ do?
 The transistor is like a bicycle gear: you control it with a small amount of current, and it in turn can control a lot more current. The transistor also allows us to use a higher voltage than the 5V Arduino can deliver.
 
 Use a transistor to control a higher current for a motor.
- - There are hundreds of transisors that will work for this application. 
+ - There are hundreds of transisors that will work for this application.
    - here are a few that I commonly use:
 	- [TIP120](https://cdn-shop.adafruit.com/datasheets/TIP120.pdf) - Darlington sold by Adafruit
 	- [IRF520](https://www.vishay.com/docs/91017/91017.pdf)
@@ -249,14 +252,14 @@ Use a transistor to control a higher current for a motor.
   - never assume the pinout of a transistor or IC.
     - ALWAYS look up the pinout before applying power.
       - or else 爆炸
-      
+
 
 ![CircuitExample](/images/MotorTransistor_AA.jpg)
 
 
 You can test this with either
 	_File -> Examples -> Basics -> Blink_
-	
+
 or
 
 	_File -> Examples -> Basics -> Fade_
@@ -264,7 +267,7 @@ or
 It's important to note that we are now using a separate power source for the motor. There are good reasons for doing so...
 
 ![CircuitExample](/images/Transistor_Motor.jpg)
-	
+
 ##### References:
 - [Arduino Transistor Motor Control](https://www.arduino.cc/en/Tutorial/TransistorMotorControl)
 - [Using a Transistor to Control Hight Current Loads](http://itp.nyu.edu/physcomp/labs/motors-and-transistors/using-a-transistor-to-control-high-current-loads-with-an-arduino/)
@@ -286,9 +289,3 @@ It's important to note that we are now using a separate power source for the mot
 
 #### Resources!!!
 - [Dr Sudhu's resources page](https://github.com/loopstick/ResourcesForClasses)
-
-
-
-
-
-
