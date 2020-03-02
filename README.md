@@ -149,6 +149,11 @@ Use the breadboard to add an external LED.
 - The resistor value can be anywhere from 100 ohm to 1k ohm.
   - The lower the resistance, the brighter the light.
   - Evil Mad Scientist explains it well [here](https://www.evilmadscientist.com/2012/resistors-for-leds/)
+  - Resistor Color Code!
+    - [Learn the Resistor Color Code in in 5 minutes](http://www.resistorguide.com/resistor-color-code/)
+- LEDs are polarized
+  - [identifying LED polarity](https://www.youtube.com/watch?v=SRDgNR_yCms)
+  ![led_example](/images/led_example.png)
 
 
 Here’s a picture showing how to connect the LED and resistor on the breadboard:
@@ -162,7 +167,7 @@ Here is another view of this circuit:
 
 Use the Blink sketch: _File -> Examples -> Basics -> Blink_
 
-	Does your LED blink?
+Does the LED on the breadboard blink?
 		(think about why)
 
 ### Exercise 1:
