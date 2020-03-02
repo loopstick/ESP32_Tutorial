@@ -136,10 +136,14 @@ some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/e
 - combine HelloWorld and Blink to make a program that shows it's working with physical and digital output.
 
 
-#### Using a solderless Breadboard to connect Arduino to other things (LEDs, motors, speakers, sensors, etc.)
+#### Using a solderless Breadboard to connect your microcontroller to other things (LEDs, motors, speakers, sensors, etc.)
+
+[Huzzah32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)
+
+![adafruithuzzah32pin](/images/adafruithuzzah32pin.jpg)
 
 The Solderless Breadboard
-- SparkFun [How to use a Breadboard tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard)
+- [How to use a Breadboard tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard)
 - [Breadboard connections](http://wiring.org.co/learning/tutorials/breadboard/)
 
 ![Breadboard](/images/Breadboard_st.jpg)
