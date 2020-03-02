@@ -370,9 +370,10 @@ void loop(){
 
 
 ### Sensor ranges, calibration, and mapping
-We lit up an LED using _analogWrite()_ based on sensor data _analogRead()_!
+- _coming soon._
 
-What else can PWM do?
+
+### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
 
 
