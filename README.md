@@ -378,7 +378,7 @@ void loop(){
 
 
 ### GPIO outputs: Voltage and current
-- When used as outputs, two things must be considered: the voltage and the current. Our ESP32 can deliver 3.3v, and at most 40mA.
+- When used as outputs, two things must be considered: the voltage and the current. Our ESP32 can deliver 3.3v, and at most 12 or 28mA (250mA maximum for all channels - according to Adafruit).
 - The voltage is determined by the source, but the current is determined by whatever we’re trying to control. In the case of  LEDs, they only need 20 mA or less. The motor we have might take more than 40 mA. In the worst case, when it’s stalled, it might want a 200 mA.
 - The important thing to realize is that the microcontroller does not have the ability to limit this current. It will try to deliver whatever is asked of it, even if it overheats and damages itself.
 - If we want to control a device that might take more than 40 mA, we have to use an intermediary.
