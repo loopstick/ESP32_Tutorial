@@ -206,7 +206,7 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
 ### How to read a switch from a GPIO: digitalRead()
 - Switches
   - [What is a Switch?](https://learn.sparkfun.com/tutorials/switch-basics/what-is-a-switch)
-  - [SwitchTypes](https://www.allaboutcircuits.com/textbook/digital/chpt-4/switch-types/)
+  - [Switch Types](https://www.allaboutcircuits.com/textbook/digital/chpt-4/switch-types/)
 - digitalRead()
   - _Arduino->File->Examples->Basics->DigitalReadSerial_
   - [Digital Read Serial](http://arduino.cc/en/Tutorial/DigitalReadSerial) tutorial
@@ -302,8 +302,26 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
-- ESP32 can output PWM on ANY pin.
-  - ESP32 uses a different function to call PWM output
+
+- Arduino: _analogWrite()_ only works on certain pins which are capable of [PWM](https://www.arduino.cc/en/tutorial/PWM).
+  - see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
+
+- **ESP32 can output PWM on ANY pin.**
+  - ESP32 uses different functions to call PWM output
+  ```cpp ledcAttachPin(GPIO, channel)
+     ledcWrite(channel, dutycycle)
+  ```
+
+    - 16 PWM channels (0-15)
+    - variable PWM frequency (5000 is plenty for LEDs)
+    - variable duty cycle
+      - 8 bits = 0-255
+      - this is how you control 'intensity'
+
+
+
+
+
 
 ### analogWrite(): Controlling speed or brightness
 If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess analogWrite() might do?
@@ -324,9 +342,6 @@ How does it know to start fading down when it reaches the maximum value?
   }
 ```
 
-Why did I ask you to move the LED to pin 9?
-	It turns out analogWrite() only works on certain pins which are capable of [PWM](https://www.arduino.cc/en/tutorial/PWM) output: 3, 5, 6, 9, 10, and 11.
-	see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
 
 
 ### Sensor ranges, calibration, and mapping
