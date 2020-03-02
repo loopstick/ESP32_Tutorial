@@ -145,27 +145,28 @@ The Solderless Breadboard
 
 
 Use the breadboard to add an external LED.
-- LEDs must always be used with resistors so they don’t burn out. - The resistor value can be anywhere from 100 ohm to 1k ohm.
-- The lower the resistance, the brighter the light.
+- LEDs must always be used with resistors so they don’t burn out.
+- The resistor value can be anywhere from 100 ohm to 1k ohm.
+  - The lower the resistance, the brighter the light.
   - Evil Mad Scientist explains it well [here](https://www.evilmadscientist.com/2012/resistors-for-leds/)
 
 
 Here’s a picture showing how to connect the LED and resistor on the breadboard:
 
-![LED_Breadboard2](/images/LED_Breadboard2.jpg)
+![LED_Breadboard2](/images/ESP32_LED.jpg)
 
 Here is another view of this circuit:
 
 ![ESP32_LED_01](/images/ESP32_LED_01.png)
 
 
-
 Use the Blink sketch: _File -> Examples -> Basics -> Blink_
+
 	Does your LED blink?
 		(think about why)
 
 ### Exercise 1:
-Move LED to a different pin (e.g. pin 8).
+Move LED to a different pin (e.g. pin 12).
 	See if you can figure out how to do this on your own
 
 Now the LED won’t blink until you change the program, since the program is only turning pin 13 on and off. Change the program to control pin 8.
@@ -179,7 +180,7 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
 So far we’ve only used Arduino as an output device, to control something in the physical world (the LED). The other way of interfacing to the physical world is as an input device, using a sensor to get information about the physical world. We’ll start with a photoresistor, also called a light dependent resistor or LDR. It’s a resistor whose resistance depends on the light: the more light, the lower the resistance. (The resistor we used above with the LED is a fixed resistor.)
 The LDR indicates the amount of light by changing its resistance, but Arduino can not measure resistance. But, Arduino can measure voltage! Fortunately, we can easily convert a varying resistance to a varying voltage using a fixed resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). This time the fixed resistor needs a larger resistance, so select a 10k ohm resistor and build the circuit below. You don’t need to remove the LED circuit as there should be room on your breadboard for both, and we’ll use the LED again later.
 
-![CircuitExample](/images/Arduino_LDR_VoltageDiv.jpg)
+![CircuitExample](/images/ESP32_LDR.png)
 
 Open and upload this sketch:
 _File->Examples->Basics->AnalogReadSerial_
@@ -201,6 +202,8 @@ What other kinds of sensors are there?
 That's nice, but what if we want to use the sensor data to control some kind of physical reaction (light, heat, motion) to the data?
 
 Let's shift our focus, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
+
+
 
 
 
