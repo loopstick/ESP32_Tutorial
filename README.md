@@ -153,6 +153,7 @@ Use the breadboard to add an external LED.
     - [Learn the Resistor Color Code in in 5 minutes](http://www.resistorguide.com/resistor-color-code/)
 - LEDs are polarized
   - [identifying LED polarity](https://www.youtube.com/watch?v=SRDgNR_yCms)
+
   ![led_example](/images/led_example.png)
 
 
