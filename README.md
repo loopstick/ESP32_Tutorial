@@ -308,9 +308,10 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 
 - **ESP32 can output PWM on ANY pin.**
   - ESP32 uses different functions to call PWM output
-  ```cpp ledcAttachPin(GPIO, channel)
+  ```cpp
+      ledcAttachPin(GPIO, channel)
 
-     ledcWrite(channel, dutycycle)
+      ledcWrite(channel, dutycycle)
   ```
 
     - 16 PWM channels (0-15)
