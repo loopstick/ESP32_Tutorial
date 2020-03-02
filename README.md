@@ -307,20 +307,19 @@ What other kinds of sensors are there?
     - Try searching on Adafruit for [“3.3v sensor”](https://www.adafruit.com/?q=3.3v%20sensor&p=5)
 
 
-More on Sensors in the near future
+#### More on Sensors in the near future
 
 
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
 
 ### analogWrite(): Controlling speed or brightness
-If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess _analogWrite()_ might do?
-
-### Analog Output - PWM - Major Difference between Arduino and ESP32
+- If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess _analogWrite()_ might do?
 
 - Arduino: _analogWrite()_ only works on certain pins which are capable of [PWM](https://www.arduino.cc/en/tutorial/PWM).
   - see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
 
+### Analog Output - PWM - Major Difference between Arduino and ESP32
 - **ESP32 can output PWM on ANY pin.**
   - ESP32 uses different functions to call PWM output
   ```cpp
