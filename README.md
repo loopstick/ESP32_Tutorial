@@ -301,7 +301,7 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 
 
 ### analogWrite(): Controlling speed or brightness
-If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess ~analogWrite()~ might do?
+If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess _analogWrite()_ might do?
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
 
@@ -319,7 +319,7 @@ If digitalWrite() can turn an LED on and off, and analogRead() can read a range 
     - variable PWM frequency (5000 is plenty for LEDs)
     - variable duty cycle
       - 8 bits = 0-255
-      - this is how you control 'intensity'
+      - this is how you control the intensity of the output
 
 ```cpp
 /*
@@ -353,57 +353,37 @@ void loop(){
     delay(15);
   }
 
-
   // decrease the LED brightness
   for(int dutyCycle = 255; dutyCycle >= 0; dutyCycle--){
     // changing the LED brightness with PWM
     ledcWrite(ledChannel, dutyCycle);   
     delay(15);
   }
-
 }
 ```
   - see [examples/PWM/PWM.ino](/examples/PWM/PWM.ino)
 
-
-
-
-
-Move the LED to pin 9:
-
-Now upload this sketch:
-_File -> Examples -> Basics -> Fade_
-
-What’s the LED doing? Can you figure out how the sketch is doing this?
-```cpp
-analogWrite(led, brightness);
-and then
-brightness = brightness + fadeAmount;
-How does it know to start fading down when it reaches the maximum value?
-  if (brightness == 0 || brightness == 255) {
-    fadeAmount = -fadeAmount ;
-  }
-```
+##### Exercises:
+  Fade your LED according to the data from an LDR.
+    - [examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino](/examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino)
 
 
 
 ### Sensor ranges, calibration, and mapping
-
-
 We lit up an LED using _analogWrite()_ based on sensor data _analogRead()_!
 
-What else can _analogWrite()_ do?
-	_analogWrite()_ also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with Arduino’s outputs.
+What else can PWM do?
+	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
 
 
-### Arduino outputs: Voltage and current
-- When used as outputs, two things must be considered: the voltage and the current. Our Arduino can deliver 5 v, and at most 40 mA.
-- The voltage is determined by Arduino, but the current is determined by whatever we’re trying to control. In the case of the LEDs, they only need 20 mA or less. The motor we have might take more than 40 mA. In the worst case, when it’s stalled, it might want a 200 mA.
-- The important thing to realize is that Arduino does not have the ability to limit this current. It will try to deliver whatever is asked of it, even if it overheats and damages itself.
+### GPIO outputs: Voltage and current
+- When used as outputs, two things must be considered: the voltage and the current. Our ESP32 can deliver 3.3v, and at most 40mA.
+- The voltage is determined by the source, but the current is determined by whatever we’re trying to control. In the case of  LEDs, they only need 20 mA or less. The motor we have might take more than 40 mA. In the worst case, when it’s stalled, it might want a 200 mA.
+- The important thing to realize is that the microcontroller does not have the ability to limit this current. It will try to deliver whatever is asked of it, even if it overheats and damages itself.
 - If we want to control a device that might take more than 40 mA, we have to use an intermediary.
 
 ### Controlling large loads with a transistor
-The transistor is like a bicycle gear: you control it with a small amount of current, and it in turn can control a lot more current. The transistor also allows us to use a higher voltage than the 5V Arduino can deliver.
+The transistor is like a bicycle gear: you control it with a small amount of current, and it in turn can control a lot more current. The transistor also allows us to use a higher voltage than the 3.3V the ESP32 can deliver.
 
 Use a transistor to control a higher current for a motor.
  - There are hundreds of transisors that will work for this application.
@@ -419,12 +399,9 @@ Use a transistor to control a higher current for a motor.
 ![CircuitExample](/images/MotorTransistor_AA.jpg)
 
 
-You can test this with either
-	_File -> Examples -> Basics -> Blink_
+You can test this with any of the code above for driving an LED, replacing the LED with the motor and transistor circuit.
 
-or
 
-	_File -> Examples -> Basics -> Fade_
 
 It's important to note that we are now using a separate power source for the motor. There are good reasons for doing so...
 
@@ -432,16 +409,16 @@ It's important to note that we are now using a separate power source for the mot
 
 #### References:
 - [Arduino Transistor Motor Control](https://www.arduino.cc/en/Tutorial/TransistorMotorControl)
-- [Using a Transistor to Control Hight Current Loads](http://itp.nyu.edu/physcomp/labs/motors-and-transistors/using-a-transistor-to-control-high-current-loads-with-an-arduino/)
+- [Using a Transistor to Control High Current Loads](http://itp.nyu.edu/physcomp/labs/motors-and-transistors/using-a-transistor-to-control-high-current-loads-with-an-arduino/)
 
 
 
 ### More to explore
+- **The problem with, and a solution to, delay():**
+  - [BlinkWithoutDelay](http://arduino.cc/en/Tutorial/BlinkWithoutDelay)
 - Making sounds: [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
 - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
 - Multiple output devices: play melody while controlling motor speed, etc.
-- The problem with, and a solution to, delay(): 
-- [BlinkWithoutDelay(http://arduino.cc/en/Tutorial/BlinkWithoutDelay) tutorial
 - Boolean logic, tests, and conditionals
 
 

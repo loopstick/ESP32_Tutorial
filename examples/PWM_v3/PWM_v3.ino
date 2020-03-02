@@ -2,9 +2,10 @@
  * PWM example code
  * 2 LEDs - internal and external
  */
- 
- // the number of the LED pin
-const int ledPin = 12;  // 12 corresponds to GPIO16
+
+// the number of the LED pin
+const int ledExternal = 12;  
+const int ledInternal = 13;  
 
 // setting PWM properties
 // variable PWM frequency (5000 is plenty for LEDs)
@@ -19,10 +20,9 @@ void setup(){
   ledcSetup(ledChannel, freq, resolution);
   
   // attach the channel to the GPIO to be controlled
-  ledcAttachPin(ledPin, ledChannel);
+  ledcAttachPin(ledExternal, ledChannel);
+  ledcAttachPin(ledInternal, ledChannel);
 
-  // configure built in LED as oUTPUT
-  pinMode(13,OUTPUT);
 }
  
 void loop(){
@@ -33,8 +33,6 @@ void loop(){
     delay(15);
   }
 
-  digitalWrite(13,HIGH);
-  
   // decrease the LED brightness
   for(int dutyCycle = 255; dutyCycle >= 0; dutyCycle--){
     // changing the LED brightness with PWM
@@ -42,5 +40,5 @@ void loop(){
     delay(15);
   }
   
-  digitalWrite(13,LOW);
+
 }
