@@ -135,13 +135,15 @@ some more code anatomy - info about an Arduino [Sketch](https://www.arduino.cc/e
 
 #### Using a solderless Breadboard to connect Arduino to other things (LEDs, motors, speakers, sensors, etc.)
 
-The Solderless Breadboard (SparkFun [tutorial:](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard))
+The Solderless Breadboard
+- SparkFun [How to use a Breadboard tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard)
+- [Breadboard connections](http://wiring.org.co/learning/tutorials/breadboard/)
 
 ![Breadboard](/images/Breadboard_st.jpg)
 
 ![Breadboard underside](/images/BreadboardUnderside_st.jpg)
 
-[Breadboard connections](http://wiring.org.co/learning/tutorials/breadboard/)
+
 
 
 Use it to add an external LED. LEDs must always be used with resistors so they don’t burn out. The resistor value can be anywhere from 100 ohm to 1k ohm. The lower the resistance, the brighter the light.
