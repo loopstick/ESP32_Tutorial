@@ -210,15 +210,15 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
 - digitalRead()
   - _Arduino->File->Examples->Basics->DigitalReadSerial_
   - [Digital Read Serial](http://arduino.cc/en/Tutorial/DigitalReadSerial) tutorial
-  
+
   ![ESP32_BTN_LED](/images/ESP32_BTN_LED.png)
-  
+
   ```cpp
   DigitalReadSerial
   Reads a digital input on pin A0, prints the result to the Serial Monitor
   This example code is in the public domain.
   http://www.arduino.cc/en/Tutorial/DigitalReadSerial
-  
+
 	// A0 has the pushbutton attached to it. Give it a name:
 	int pushButton = A0;
 
@@ -239,17 +239,17 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
  	 delay(1);        // delay in between reads for stability
 	}
    ```
-   
+
    - see [examples/DigitalRead/DigitalRead.ino](/examples/DigitalRead/DigitalRead.ino)
-  
-  
+
+
 ##### Exercises:
 - Write an IF statement to turn the LED on when the button is pushed.
 - Write an IF statement to toggle the LED on when the button is pushed.
 - Write an IF statement to toggle the LED on when the button is pushed a certain number of times.
-  
-  
-  
+
+
+
 
 ### How to use a sensor: analogRead()
 So far we’ve only used Arduino as an output device, to control something in the physical world (the LED). The other way of interfacing to the physical world is as an input device, using a sensor to get information about the physical world. We’ll start with a photoresistor, also called a light dependent resistor or LDR. It’s a resistor whose resistance depends on the light: the more light, the lower the resistance. (The resistor we used above with the LED is a fixed resistor.)
