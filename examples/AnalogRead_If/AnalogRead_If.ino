@@ -20,6 +20,8 @@ void setup() {
   // initialize the LED pin as outputs.
   pinMode(ledExternal, OUTPUT);
   pinMode(ledInternal, OUTPUT);
+  // initialize the input pin as input
+  pinMode(A0, INPUT);
 
 }
 
