@@ -4,9 +4,9 @@
  - from materials originally created by: Michael Shiloh and Judy Castro for *Teach Me To Make*
 
 #### Tutorial overview
-The workshop will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with your ESP32 (specifically [Adafruit's Huzzah32](https://www.adafruit.com/product/3405)) and the Arduino IDE and can explore further on your own.
+The tutorial will focus on getting you up and running with Arduino quickly, so that you will understand the basic procedures for working with your ESP32 (specifically [Adafruit's Huzzah32](https://www.adafruit.com/product/3405)) and the Arduino IDE and can explore further on your own.
 
-We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
+We will cover how to install Arduino on your laptop; how to understand, modify, and write Arduino programs; how to connect input devices and sensors to your ESP32 and read them from a program; and how to connect actuators (LEDs, motors, speakers) and control them from a program. Other topics will be covered as interest dictates and time permits.
 
 #### Additional Resources
 What is Arduino anyway?
@@ -203,7 +203,55 @@ If you changed the program to control only pin 8, then the built-in LED on pin 1
 
 Are we limited to LEDs? No; we could replace the LED (and its resistor) with any other suitable device, with some considerations. We’ll learn more about this later.
 
-#### How to use a sensor: analogRead()
+### How to read a switch from a GPIO: digitalRead()
+- Switches
+  - [What is a Switch?](https://learn.sparkfun.com/tutorials/switch-basics/what-is-a-switch)
+  - [SwitchTypes](https://www.allaboutcircuits.com/textbook/digital/chpt-4/switch-types/)
+- digitalRead()
+  - _Arduino->File->Examples->Basics->DigitalReadSerial_
+  - [Digital Read Serial](http://arduino.cc/en/Tutorial/DigitalReadSerial) tutorial
+  
+  ![ESP32_BTN_LED](/images/ESP32_BTN_LED.png)
+  
+  ```cpp
+  DigitalReadSerial
+  Reads a digital input on pin A0, prints the result to the Serial Monitor
+  This example code is in the public domain.
+  http://www.arduino.cc/en/Tutorial/DigitalReadSerial
+  
+	// A0 has the pushbutton attached to it. Give it a name:
+	int pushButton = A0;
+
+	// the setup routine runs once when you press reset:
+	void setup() {
+ 	 // initialize serial communication at 9600 bits per second:
+  	Serial.begin(9600);
+ 	 // make the pushbutton's pin an input:
+  	pinMode(pushButton, INPUT);
+	}
+
+	// the loop routine runs over and over again forever:
+	void loop() {
+ 	 // read the input pin:
+  	int buttonState = digitalRead(pushButton);
+ 	 // print out the state of the button:
+ 	 Serial.println(buttonState);
+ 	 delay(1);        // delay in between reads for stability
+	}
+   ```
+   
+   - see [examples/DigitalRead/DigitalRead.ino](/examples/DigitalRead/DigitalRead.ino)
+  
+  
+##### Exercises:
+- Write an IF statement to turn the LED on when the button is pushed.
+- Write an IF statement to toggle the LED on when the button is pushed.
+- Write an IF statement to toggle the LED on when the button is pushed a certain number of times.
+  
+  
+  
+
+### How to use a sensor: analogRead()
 So far we’ve only used Arduino as an output device, to control something in the physical world (the LED). The other way of interfacing to the physical world is as an input device, using a sensor to get information about the physical world. We’ll start with a photoresistor, also called a light dependent resistor or LDR. It’s a resistor whose resistance depends on the light: the more light, the lower the resistance. (The resistor we used above with the LED is a fixed resistor.)
 The LDR indicates the amount of light by changing its resistance, but Arduino can not measure resistance. But, Arduino can measure voltage! Fortunately, we can easily convert a varying resistance to a varying voltage using a fixed resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). This time the fixed resistor needs a larger resistance, so select a 10k ohm resistor and build the circuit below. You don’t need to remove the LED circuit as there should be room on your breadboard for both, and we’ll use the LED again later.
 
@@ -252,7 +300,7 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 - ESP32 can output PWM on ANY pin.
   - ESP32 uses a different function to call PWM output
 
-#### analogWrite(): Controlling speed or brightness
+### analogWrite(): Controlling speed or brightness
 If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess analogWrite() might do?
 
 Move the LED to pin 9:
@@ -276,7 +324,7 @@ Why did I ask you to move the LED to pin 9?
 	see the[Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board)for more info
 
 
-#### Sensor ranges, calibration, and mapping
+### Sensor ranges, calibration, and mapping
 
 
 We lit up an LED using _analogWrite()_ based on sensor data _analogRead()_!
@@ -285,13 +333,13 @@ What else can _analogWrite()_ do?
 	_analogWrite()_ also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with Arduino’s outputs.
 
 
-#### Arduino outputs: Voltage and current
+### Arduino outputs: Voltage and current
 - When used as outputs, two things must be considered: the voltage and the current. Our Arduino can deliver 5 v, and at most 40 mA.
 - The voltage is determined by Arduino, but the current is determined by whatever we’re trying to control. In the case of the LEDs, they only need 20 mA or less. The motor we have might take more than 40 mA. In the worst case, when it’s stalled, it might want a 200 mA.
 - The important thing to realize is that Arduino does not have the ability to limit this current. It will try to deliver whatever is asked of it, even if it overheats and damages itself.
 - If we want to control a device that might take more than 40 mA, we have to use an intermediary.
 
-#### Controlling large loads with a transistor
+### Controlling large loads with a transistor
 The transistor is like a bicycle gear: you control it with a small amount of current, and it in turn can control a lot more current. The transistor also allows us to use a higher voltage than the 5V Arduino can deliver.
 
 Use a transistor to control a higher current for a motor.
@@ -319,17 +367,13 @@ It's important to note that we are now using a separate power source for the mot
 
 ![CircuitExample](/images/Transistor_Motor.jpg)
 
-##### References:
+#### References:
 - [Arduino Transistor Motor Control](https://www.arduino.cc/en/Tutorial/TransistorMotorControl)
 - [Using a Transistor to Control Hight Current Loads](http://itp.nyu.edu/physcomp/labs/motors-and-transistors/using-a-transistor-to-control-high-current-loads-with-an-arduino/)
 
 
 
-#### More to explore
-- digitalRead()
-- What is a switch?
-- _Arduino->File->Examples->Basics->DigitalReadSerial_
-- [Digital Read Serial](http://arduino.cc/en/Tutorial/DigitalReadSerial) tutorial
+### More to explore
 - Making sounds: [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
 - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
 - Multiple output devices: play melody while controlling motor speed, etc.
@@ -338,5 +382,5 @@ It's important to note that we are now using a separate power source for the mot
 - Boolean logic, tests, and conditionals
 
 
-#### Resources!!!
+### Resources!!!
 - [Dr Sudhu's resources page](https://github.com/loopstick/ResourcesForClasses)
