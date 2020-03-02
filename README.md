@@ -144,10 +144,11 @@ The Solderless Breadboard
 ![Breadboard underside](/images/BreadboardUnderside_st.jpg)
 
 
+Use the breadboard to add an external LED.
+- LEDs must always be used with resistors so they don’t burn out. - The resistor value can be anywhere from 100 ohm to 1k ohm.
+- The lower the resistance, the brighter the light.
+  - Evil Mad Scientist explains it well [here](https://www.evilmadscientist.com/2012/resistors-for-leds/)
 
-
-Use it to add an external LED. LEDs must always be used with resistors so they don’t burn out. The resistor value can be anywhere from 100 ohm to 1k ohm. The lower the resistance, the brighter the light.
-Evil Mad Scientist explains it well [here](https://www.evilmadscientist.com/2012/resistors-for-leds/)
 
 Here’s a picture showing how to connect the LED and resistor on the breadboard:
 
