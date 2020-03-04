@@ -13,6 +13,7 @@ What is Arduino anyway?
  - Read about Arduino: https://www.arduino.cc/en/Guide/Introduction
 
 What is ESP32?
+ - read up on [ESP32 on Wikipedia](https://en.wikipedia.org/wiki/ESP32)
  - Check out the [ESP32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
 	from [espressif](https://www.espressif.com/en/products/hardware/esp32/overview)
 
