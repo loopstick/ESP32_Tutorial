@@ -184,7 +184,7 @@ Here’s a picture showing how to connect the LED and resistor on the breadboard
 
 Here is another view of this circuit:
 
-![ESP32_LED_01](/images/ESP32_LED_01.png)
+![ESP32_LED_01](/images/ESP32_LED.png)
 
 
 Use the Blink sketch: _File -> Examples -> Basics -> Blink_
