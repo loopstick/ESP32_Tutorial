@@ -390,6 +390,15 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
 
 ![ESP32_LED_RGB](/images/ESP32_LED_RGB.png)
 
+- Generally we use a slightly larger resistor (150 ohm) for the RED component and the same slightly smaller resistor values (100 ohm) for the GREEN and BLUE components.
+- for our circuit let's use:
+  - 470 ohm for RED
+    - color bands-> yellow, purple, black, black, brown
+  - 430 ohm for GREEN and BLUE
+    - color bands-> yellow, orange, black, black, brown
+
+- [examples/PWM_RGB/PWM_RGB.ino](/examples/PWM_RGB/PWM_RGB.ino)
+
 ### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
 
