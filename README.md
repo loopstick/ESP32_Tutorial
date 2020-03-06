@@ -261,7 +261,7 @@ Are we limited to LEDs? No; we could replace the LED (and its resistor) with any
 So far we’ve only used Arduino as an output device, to control something in the physical world (the LED). The other way of interfacing to the physical world is as an input device, using a sensor to get information about the physical world. We’ll start with a photoresistor, also called a light dependent resistor or LDR. It’s a resistor whose resistance depends on the light: the more light, the lower the resistance. (The resistor we used above with the LED is a fixed resistor.)
 The LDR indicates the amount of light by changing its resistance, but Arduino can not measure resistance. But, Arduino can measure voltage! Fortunately, we can easily convert a varying resistance to a varying voltage using a fixed resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). This time the fixed resistor needs a larger resistance, so select a 10k ohm resistor and build the circuit below. You don’t need to remove the LED circuit as there should be room on your breadboard for both, and we’ll use the LED again later.
 
-![CircuitExample](/images/ESP32_LDR.png)
+![CircuitExample](/images/ESP32_LDR_LED.png)
 
 Open and upload this sketch:
 _File->Examples->Basics->AnalogReadSerial_
