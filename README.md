@@ -403,6 +403,7 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
 Some other online information about RGB LEDs
  - https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
  - https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/breadboard-layout
+ - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
 
 
 
