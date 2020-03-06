@@ -381,10 +381,14 @@ void loop(){
     - [examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino](/examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino)
 
 
-
 ### Sensor ranges, calibration, and mapping
 - _coming soon._
 
+
+#### RGB LEDs
+RGB LEDs are really handy for non-text, non-serial debug and they make really pretty colors!
+
+![ESP32_LED_RGB](/images/ESP32_LED_RGB.png)
 
 ### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
