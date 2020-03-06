@@ -396,8 +396,13 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
     - color bands-> yellow, purple, black, black, brown
   - 430 ohm for GREEN and BLUE
     - color bands-> yellow, orange, black, black, brown
+  - We're using common _CATHODE_ RGB LEDs
 
 [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino)
+
+Some other online information about RGB LEDs
+ - https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
+ - https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/breadboard-layout
 
 
 
