@@ -397,7 +397,9 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
   - 430 ohm for GREEN and BLUE
     - color bands-> yellow, orange, black, black, brown
 
-- [examples/PWM_RGB/PWM_RGB.ino](/examples/PWM_RGB/PWM_RGB.ino)
+[RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino)
+
+
 
 ### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
@@ -432,7 +434,6 @@ You can test this with any of the code above for driving an LED, replacing the L
 
 It's important to note that we are now using a separate power source for the motor. There are good reasons for doing so...
 
-![CircuitExample](/images/Transistor_Motor.jpg)
 
 #### References:
 - [Arduino Transistor Motor Control](https://www.arduino.cc/en/Tutorial/TransistorMotorControl)
