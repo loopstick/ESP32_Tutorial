@@ -451,12 +451,23 @@ It's important to note that we are now using a separate power source for the mot
 
 ### More to explore
 - **The problem with, and a solution to, delay():**
-  - [BlinkWithoutDelay](http://arduino.cc/en/Tutorial/BlinkWithoutDelay)
-- Making sounds: [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
-- Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
-- Multiple output devices: play melody while controlling motor speed, etc.
-- Boolean logic, tests, and conditionals
-
-
+  - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
+  - [Another](https://www.baldengineer.com/millis-tutorial.html) explanation of Blink Without Delay
+  - In order to understand Blink Without Delay, it is helpful to first understand [millis()](https://www.arduino.cc/en/Reference/Millis)
+  - Excellent Adafruit Multitasking [Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all)
+(highly recommended)
+  - A detailed [explanation](https://programmingelectronics.com/tutorial-16-blink-an-led-without-using-the-delay-function-old-version/) of Blink Without Delay. 
+  - Very detailed line-by-line [explanation](https://www.baldengineer.com/blink-without-delay-explained.html)
+of Blink Without Delay, with links to explanations of related concepts every step of the way.
+  
+- **Interfacing with Hardware**
+ - [Interfacing with Hardware](http://playground.arduino.cc/Main/InterfacingWithHardware)
+ - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
+ - Multiple output devices: play melody while controlling motor speed, etc.
+ - Boolean logic, tests, and conditionals
+ 
+- **Making sounds** 
+  - [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
+  
 ### Resources!!!
 - [Dr Sudhu's resources page](https://github.com/loopstick/ResourcesForClasses)
