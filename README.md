@@ -410,6 +410,8 @@ Some other online information about RGB LEDs
 ### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
 
+### Interlude: Ohm's Law!
+ - [MAKE presents: Ohm's Law](https://www.youtube.com/watch?v=-mHLvtGjum4)
 
 ### GPIO outputs: Voltage and current
 - When used as outputs, two things must be considered: the voltage and the current. Our ESP32 can deliver 3.3v, and at most 12 or 28mA (250mA maximum for all channels - according to Adafruit).
