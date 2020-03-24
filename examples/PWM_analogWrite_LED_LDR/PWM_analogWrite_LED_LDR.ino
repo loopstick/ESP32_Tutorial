@@ -11,8 +11,8 @@ const int ledExternal = 12;
 const int ledInternal = 13;  
 
 int brightness = 0;
-int LDRmin = 900;
-int LDRmax = 3000;
+int LDRmin = 1000;
+int LDRmax = 2800;
  
 void setup(){
   // start Serial communication at 9600 baud

@@ -400,7 +400,7 @@ void loop(){
   - Fade an LED-
     - [examples/PWM_analogWrite/PWM_analogWrite.ino](/examples/PWM_analogWrite/PWM_analogWrite.ino)
   - Fade your LED with data from an LDR.
-    - [examples/PWM_analogWrite_LED_LDRD/PWM_analogWrite_LED_LDRD.ino](/examples/PWM_analogWrite_LED_LDR/PWM_analogWrite_LED_LDR.ino)
+    - [examples/PWM_analogWrite_LED_LDRD/PWM_analogWrite_LED_LDR.ino](/examples/PWM_analogWrite_LED_LDR/PWM_analogWrite_LED_LDR.ino)
 
 
 
