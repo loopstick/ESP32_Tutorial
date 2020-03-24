@@ -290,10 +290,6 @@ Use an IF statement to turn your LED on and off according to the data coming fro
 
   - see [examples/AnalogRead_If/AnalogRead_If.ino](/examples/AnalogRead_If/AnalogRead_If.ino)
 
-
-
-
-
 What other kinds of sensors are there?
 - [Sensor workshop at ITP](https://itp.nyu.edu/physcomp/lessons/sensors-the-basics/)
 
@@ -311,6 +307,9 @@ What other kinds of sensors are there?
 #### More on Sensors in the near future
 
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
+
+### Sensor ranges, calibration, and mapping
+- _coming soon._
 
 
 ### analogWrite(): Controlling speed or brightness
@@ -388,19 +387,21 @@ void loop(){
 
 ### ESP32_AnalogWrite
 - This handy library allows us to use the analogWrite() function
-  - ``` Provides an analogWrite polyfill for ESP32 using the LEDC functions ```
+  - ``` provides an analogWrite polyfill for ESP32 using the LEDC functions ```
 - https://github.com/ERROPiX/ESP32_AnalogWrite
+- How To:
+  [Installing Additional Arduino Libraries](https://www.arduino.cc/en/guide/libraries)
   - download
     - locate .zip
   - Sketch > Include Library > Add .ZIP Library
   - Sketch > Include Library > ESP32 Analog Write
-- How To:
-  [Installing Additional Arduino Libraries](https://www.arduino.cc/en/guide/libraries)
 
+##### Exercises:
+  - Fade an LED-
+    - [examples/PWM_analogWrite/PWM_analogWrite.ino](/examples/PWM_analogWrite/PWM_analogWrite.ino)
+  - Fade your LED with data from an LDR.
+    - [examples/PWM_analogWrite_LED_LDRD/PWM_analogWrite_LED_LDRD.ino](/examples/PWM_analogWrite_LED_LDR/PWM_analogWrite_LED_LDR.ino)
 
-
-### Sensor ranges, calibration, and mapping
-- _coming soon._
 
 
 #### RGB LEDs
@@ -422,6 +423,8 @@ Some other online information about RGB LEDs
  - https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
  - https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/breadboard-layout
  - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
+
+
 
 ## Multi-Tasking - DITCH the DELAY!
  - ```Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor.
