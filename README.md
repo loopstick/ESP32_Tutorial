@@ -434,7 +434,7 @@ Some other online information about RGB LEDs
 
 
   - **[Adafruit Multi-Tasking Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1/overview)**
-  
+
   - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
   - [Another](https://www.baldengineer.com/millis-tutorial.html) explanation of Blink Without Delay
   - In order to understand Blink Without Delay, it is helpful to first understand [millis()](https://www.arduino.cc/en/Reference/Millis)
@@ -445,7 +445,8 @@ Some other online information about RGB LEDs
 of Blink Without Delay, with links to explanations of related concepts every step of the way.
 
 ### What else can PWM do?
-	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
+- PWM also works well to control the speed of a motor.
+  - However now we need to consider whether our motor is compatible with our GPIO output "levels".
 
 ### Interlude: Ohm's Law!
  - [MAKE presents: Ohm's Law](https://www.youtube.com/watch?v=-mHLvtGjum4)
