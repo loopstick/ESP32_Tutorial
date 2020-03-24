@@ -1,7 +1,7 @@
 /*
- * PWM example code
+ * PWM example code - March 2020
  * 2 LEDs - internal and external
- * Analog Read - LDR
+ * Analog Read - LDR on A0
  */
 
 // the number of the LED pin

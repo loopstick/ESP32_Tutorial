@@ -310,7 +310,6 @@ What other kinds of sensors are there?
 
 #### More on Sensors in the near future
 
-
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
 
@@ -388,10 +387,19 @@ void loop(){
   Fade your LED according to the data from an LDR.
     - [examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino](/examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino)
 
+
 ### ESP32_AnalogWrite
-- This handy library allows us to use the analogWrite function
-- ``` Provides an analogWrite polyfill for ESP32 using the LEDC functions ```
+- This handy library allows us to use the analogWrite() function
+  - ``` Provides an analogWrite polyfill for ESP32 using the LEDC functions ```
 - https://github.com/ERROPiX/ESP32_AnalogWrite
+  - download
+    - locate .zip
+  - Sketch > Include Library > Add .ZIP Library
+  - Sketch > Include Library > ESP32 Analog Write
+- How To:
+  [Installing Additional Arduino Libraries](https://www.arduino.cc/en/guide/libraries)
+
+
 
 ### Sensor ranges, calibration, and mapping
 - _coming soon._
@@ -418,7 +426,7 @@ Some other online information about RGB LEDs
  - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
 
 ## Multi-Tasking - DITCH the DELAY!
- - ```Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor. 
+ - ```Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor.
 
 During a delay() call, you can’t respond to inputs, you can't process any data and you can’t change any outputs.  Delay() ties up 100% of the processor.  So, if any part of your code uses a delay(), everything else is dead in the water for the duration. ```
 
