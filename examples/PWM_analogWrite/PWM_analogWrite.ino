@@ -1,10 +1,10 @@
-#include <analogWrite.h>
-
-
 /*
  * PWM example code - March 2020
  */
  
+ 
+ #include <analogWrite.h>
+
  // the number of the LED pin
 const int ledPin = 12;  // 12 corresponds to GPIO16
 
