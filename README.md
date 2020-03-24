@@ -434,6 +434,7 @@ Some other online information about RGB LEDs
 
 
   - **[Adafruit Multi-Tasking Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1/overview)**
+  
   - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
   - [Another](https://www.baldengineer.com/millis-tutorial.html) explanation of Blink Without Delay
   - In order to understand Blink Without Delay, it is helpful to first understand [millis()](https://www.arduino.cc/en/Reference/Millis)
