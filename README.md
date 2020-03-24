@@ -427,11 +427,11 @@ Some other online information about RGB LEDs
 
 
 ## Multi-Tasking - DITCH the DELAY!
- ```
- Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor.
 
-During a delay() call, you can’t respond to inputs, you can't process any data and you can’t change any outputs.  Delay() ties up 100% of the processor.  So, if any part of your code uses a delay(), everything else is dead in the water for the duration.
-```
+ - Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor.
+
+- During a delay() call, you can’t respond to inputs, you can't process any data and you can’t change any outputs.  Delay() ties up 100% of the processor.  So, if any part of your code uses a delay(), everything else is dead in the water for the duration.
+
 
   - **[Adafruit Multi-Tasking Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1/overview)**
   - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
