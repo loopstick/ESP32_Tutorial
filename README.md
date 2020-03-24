@@ -316,16 +316,24 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 
 ### analogWrite(): Controlling speed or brightness
 - If digitalWrite() can turn an LED on and off, and analogRead() can read a range of values, what would you guess _analogWrite()_ might do?
+  - You guessed it!
+- analogWrite outputs [PWM](https://www.arduino.cc/en/tutorial/PWM)
+  - PWM = pulse width modulation
+  - this allows us, effectively, to output any voltage between minimum
+    - minimum = 0 volts = 0 in code
+    - maximum = 3.3 volts (ESP32) = 255 (@8bit resolution)
 
-- Arduino: _analogWrite()_ only works on certain pins which are capable of [PWM](https://www.arduino.cc/en/tutorial/PWM).
-  - see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
+- Arduino: _analogWrite()_ only works on certain pins.
+    - see the [Arduino Uno Board Pins reference](https://www.arduino.cc/en/Reference/Board) for more info
+
+- **ESP32 can output PWM on ANY pin.**
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
-- **ESP32 can output PWM on ANY pin.**
+    ``see below for a solution to this issue``
+
   - ESP32 uses different functions to call PWM output
   ```cpp
       ledcAttachPin(GPIO, channel)
-
       ledcWrite(channel, dutycycle)
   ```
     - 16 PWM channels (0-15)
@@ -380,6 +388,10 @@ void loop(){
   Fade your LED according to the data from an LDR.
     - [examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino](/examples/AnalogRead_LDR_LED/AnalogRead_LDR_LED.ino)
 
+### ESP32_AnalogWrite
+- This handy library allows us to use the analogWrite function
+- ``` Provides an analogWrite polyfill for ESP32 using the LEDC functions ```
+- https://github.com/ERROPiX/ESP32_AnalogWrite
 
 ### Sensor ranges, calibration, and mapping
 - _coming soon._
@@ -405,7 +417,20 @@ Some other online information about RGB LEDs
  - https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/breadboard-layout
  - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
 
+## Multi-Tasking - DITCH the DELAY!
+ - ```Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor. 
 
+During a delay() call, you can’t respond to inputs, you can't process any data and you can’t change any outputs.  Delay() ties up 100% of the processor.  So, if any part of your code uses a delay(), everything else is dead in the water for the duration. ```
+
+  - **[Adafruit Multi-Tasking Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1/overview)**
+  - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
+  - [Another](https://www.baldengineer.com/millis-tutorial.html) explanation of Blink Without Delay
+  - In order to understand Blink Without Delay, it is helpful to first understand [millis()](https://www.arduino.cc/en/Reference/Millis)
+  - Excellent Adafruit Multitasking [Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all)
+(highly recommended)
+  - A detailed [explanation](https://programmingelectronics.com/tutorial-16-blink-an-led-without-using-the-delay-function-old-version/) of Blink Without Delay.
+  - Very detailed line-by-line [explanation](https://www.baldengineer.com/blink-without-delay-explained.html)
+of Blink Without Delay, with links to explanations of related concepts every step of the way.
 
 ### What else can PWM do?
 	PWM also works well to control the speed of a motor. However now we need to consider whether our motor is compatible with our GPIO output "levels".
@@ -450,24 +475,15 @@ It's important to note that we are now using a separate power source for the mot
 
 
 ### More to explore
-- **The problem with, and a solution to, delay():**
-  - [Blink Without Delay Tutorial](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) on the official Arduino website
-  - [Another](https://www.baldengineer.com/millis-tutorial.html) explanation of Blink Without Delay
-  - In order to understand Blink Without Delay, it is helpful to first understand [millis()](https://www.arduino.cc/en/Reference/Millis)
-  - Excellent Adafruit Multitasking [Tutorial](https://learn.adafruit.com/multi-tasking-the-arduino-part-1?view=all)
-(highly recommended)
-  - A detailed [explanation](https://programmingelectronics.com/tutorial-16-blink-an-led-without-using-the-delay-function-old-version/) of Blink Without Delay. 
-  - Very detailed line-by-line [explanation](https://www.baldengineer.com/blink-without-delay-explained.html)
-of Blink Without Delay, with links to explanations of related concepts every step of the way.
-  
+
 - **Interfacing with Hardware**
  - [Interfacing with Hardware](http://playground.arduino.cc/Main/InterfacingWithHardware)
  - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
  - Multiple output devices: play melody while controlling motor speed, etc.
  - Boolean logic, tests, and conditionals
- 
+
 - **Making sounds** 
   - [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
-  
+
 ### Resources!!!
 - [Dr Sudhu's resources page](https://github.com/loopstick/ResourcesForClasses)
