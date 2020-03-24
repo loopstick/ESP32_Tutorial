@@ -330,8 +330,8 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
 
   - ESP32 uses different functions to call PWM output
-      ledcAttachPin(GPIO, channel)
-      ledcWrite(channel, dutycycle)
+    - ```cpp ledcAttachPin(GPIO, channel)```
+    - ```cpp ledcWrite(channel, dutycycle)```
 
   - 16 PWM channels (0-15)
     - variable PWM frequency (5000 is plenty for LEDs)
