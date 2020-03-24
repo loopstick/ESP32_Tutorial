@@ -331,11 +331,11 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
     - ``see below for a solution to this issue``
 
   - ESP32 uses different functions to call PWM output
-  ```cpp
+  - ```cpp
       ledcAttachPin(GPIO, channel)
       ledcWrite(channel, dutycycle)```
 
-    - 16 PWM channels (0-15)
+  - 16 PWM channels (0-15)
     - variable PWM frequency (5000 is plenty for LEDs)
     - variable duty cycle
       - 8 bits = 0-255
