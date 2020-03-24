@@ -328,7 +328,7 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 - **ESP32 can output PWM on ANY pin.**
 
 ### Analog Output - PWM - Major Difference between Arduino and ESP32
-    ``see below for a solution to this issue``
+    - ``see below for a solution to this issue``
 
   - ESP32 uses different functions to call PWM output
   ```cpp
