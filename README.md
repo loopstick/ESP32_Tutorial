@@ -440,7 +440,7 @@ Some other online information about RGB LEDs
       - pin 1 to 3v
       - pin 2 to A0 & 10Kohm pulldown to GND (ground)
   - Potentiometer (blue thing with knob)
-      - potentiometer on pin A2
+      - potentiometer on pin A1
         - pin 1 to 3v
         - pin 2 to A1 (pin 2 is the middle pin)
         - pin 3 to GND (pin 1 and pin 3 are the outer pins (doesn't matter which is which))
