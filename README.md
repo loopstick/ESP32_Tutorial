@@ -417,9 +417,9 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
     - color bands-> yellow, orange, black, black, brown
   - We're using common _CATHODE_ RGB LEDs
 
-- [simplest RGB LED Test Code](/examples/RGB_Test/RGB_Test.ino)
-- [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino) using ledcWrite()
+- [RGB LED Test Code](/examples/RGB_Test/RGB_Test.ino)
 - [RGB LED code example](/examples/PWM_RGB/PWM_RGB_analogWrite.ino) using analogWrite()
+  - [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino) using ledcWrite()
 
 Some other online information about RGB LEDs
  - https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
@@ -438,18 +438,19 @@ Some other online information about RGB LEDs
   - LDR (Light Dependent Resistor)
     - LDR on pin A0
       - pin 1 to 3v
-      - pin2 to A0 & 10Kohm pulldown to GND (ground)
+      - pin 2 to A0 & 10Kohm pulldown to GND (ground)
   - Potentiometer (blue thing with knob)
       - potentiometer on pin A2
         - pin 1 to 3v
-        - pin 2 to A2 (pin 2 is the middle pin)
+        - pin 2 to A1 (pin 2 is the middle pin)
         - pin 3 to GND (pin 1 and pin 3 are the outer pins (doesn't matter which is which))
   - Button (switch)
     - insert in parallel with LDR
       - or
     - use in place of LDR
 
-
+- [Art 385 Platform Test - Color Flashing](/examples/Art385_Platform_Test/Art385_Platform_Test.ino) code
+- [Art 385 Platform Test - Color Fading](/examples/Art385_Platform_Fade/Art385_Platform_Fade.ino) code
 
 ### Multi-Tasking - DITCH the DELAY!
 
