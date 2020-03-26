@@ -451,8 +451,9 @@ Some other online information about RGB LEDs
 
 
 
-- [Art 385 Platform Test - Color Flashing](/examples/Art385_Platform_Test/Art385_Platform_Test.ino) code
-- [Art 385 Platform Test - Color Fading](/examples/Art385_Platform_Fade/Art385_Platform_Fade.ino) code
+- Art 385 Platform Test - [Color Flashing](/examples/Art385_Platform_Test/Art385_Platform_Test.ino) code
+- Art 385 Platform Test - [Color Fading](/examples/Art385_Platform_Fade/Art385_Platform_Fade.ino) code
+- Art 385 Platform Test - [Citrus Strawberry](/examples/Art385_Platform_CitrusStrawberry/Art385_Platform_CitrusStrawberry.ino) code
 
 
 
