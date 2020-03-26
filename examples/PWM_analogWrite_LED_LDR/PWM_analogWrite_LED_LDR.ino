@@ -40,5 +40,4 @@ void loop(){
     // do the oppposite at the internal LED 
     analogWrite(ledInternal, 255-brightness);
     delay(5);
-
 }

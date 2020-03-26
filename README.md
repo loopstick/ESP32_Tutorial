@@ -424,9 +424,10 @@ Some other online information about RGB LEDs
  - https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/breadboard-layout
  - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
 
+## INTRODUCING - the ART 385 hardware platform !!!
+![RGB LED code example](/images/ESP32_Art385_Platform.png)
 
-
-## Multi-Tasking - DITCH the DELAY!
+### Multi-Tasking - DITCH the DELAY!
 
  - Using delay() to control timing is probably one of the very first things you learned when experimenting with the Arduino.  Timing with delay() is simple and straightforward, but it does cause problems down the road when you want to add additional functionality.  The problem is that delay() is a "busy wait" that monopolizes the processor.
 
