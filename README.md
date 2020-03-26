@@ -425,7 +425,29 @@ Some other online information about RGB LEDs
  - https://howtomechatronics.com/tutorials/arduino/how-to-use-a-rgb-led-with-arduino/
 
 ## INTRODUCING - the ART 385 hardware platform !!!
-![RGB LED code example](/images/ESP32_Art385_Platform.png)
+![ESP32_Art385_Platform](/images/ESP32_Art385_Platform.png)
+
+- Here's a layout that will allow you to use all of the components you have to write code and prototype functionality.
+  - RGB LED
+    - Red on pin 12
+    - Green on pin 27
+    - Blue on pin 33
+    - common cathode to GND (ground) - the common pin is the _longest_ of all 4 legs
+  - LDR (Light Dependent Resistor)
+    - LDR on pin A0
+      - pin 1 to 3v
+      - pin2 to A0 & 10Kohm pulldown to GND (ground)
+  - Potentiometer (blue thing with knob)
+      - potentiometer on pin A2
+        - pin 1 to 3v
+        - pin 2 to A2 (pin 2 is the middle pin)
+        - pin 3 to GND (pin 1 and pin 3 are the outer pins (doesn't matter which is which))
+  - Button (switch)
+    - insert in parallel with LDR
+      - or
+    - use in place of LDR
+
+
 
 ### Multi-Tasking - DITCH the DELAY!
 
