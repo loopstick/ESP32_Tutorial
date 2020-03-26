@@ -417,7 +417,9 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
     - color bands-> yellow, orange, black, black, brown
   - We're using common _CATHODE_ RGB LEDs
 
-- [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino)
+- [simplest RGB LED Test Code](/examples/RGB_Test/RGB_Test.ino)
+- [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino) using ledcWrite()
+- [RGB LED code example](/examples/PWM_RGB/PWM_RGB_analogWrite.ino) using analogWrite()
 
 Some other online information about RGB LEDs
  - https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
