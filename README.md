@@ -418,7 +418,7 @@ RGB LEDs are really handy for non-text, non-serial debug and they make really pr
   - We're using common _CATHODE_ RGB LEDs
 
 - [RGB LED Test Code](/examples/RGB_Test/RGB_Test.ino)
-- [RGB LED code example](/examples/PWM_RGB/PWM_RGB_analogWrite.ino) using analogWrite()
+- [RGB LED code example](/examples/PWM_RGB_analogWrite/PWM_RGB_analogWrite.ino) using analogWrite()
   - [RGB LED code example](/examples/PWM_RGB/PWM_RGB.ino) using ledcWrite()
 
 Some other online information about RGB LEDs
