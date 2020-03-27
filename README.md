@@ -310,6 +310,9 @@ Let's shift our focus, now, for a moment, to outputting a range of voltages. The
 
 ### Sensor ranges, calibration, and mapping
 - _coming soon._
+- useful Arduino functions for
+  - [map()](https://www.arduino.cc/reference/en/language/functions/math/map/)
+  - [constrain()](https://www.arduino.cc/reference/en/language/functions/math/constrain/)
 
 
 ### analogWrite(): Controlling speed or brightness
@@ -453,7 +456,7 @@ Some other online information about RGB LEDs
 
 - Art 385 Platform Test - [Color Flashing](/examples/Art385_Platform_Test/Art385_Platform_Test.ino) code
 - Art 385 Platform Test - [Color Fading](/examples/Art385_Platform_Fade/Art385_Platform_Fade.ino) code
-- Art 385 Platform Test - [Citrus Strawberry](/examples/Art385_Platform_CitrusStrawberry/Art385_Platform_CitrusStrawberry.ino) code
+- Art 385 Platform Test - [Citrus Strawberry](/examples/Art385_Platform_CitrusStrawberry/Art385_Platform_CitrusStrawberry.ino)
 
 
 
@@ -523,6 +526,9 @@ It's important to note that we are now using a separate power source for the mot
 
 ### More to explore
 
+- **Arduino Language Reference**
+  - https://www.arduino.cc/reference/en/
+  
 - **Interfacing with Hardware**
  - [Interfacing with Hardware](http://playground.arduino.cc/Main/InterfacingWithHardware)
  - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.
