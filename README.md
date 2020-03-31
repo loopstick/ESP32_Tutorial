@@ -538,5 +538,9 @@ It's important to note that we are now using a separate power source for the mot
 - **Making sounds** 
   - [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
 
+- **Interfacing with Processing**
+  - [Arduino Virtual Color Mixer](https://www.arduino.cc/en/Tutorial/VirtualColorMixer)
+
+
 ### Resources!!!
 - [Dr Sudhu's resources page](https://github.com/loopstick/ResourcesForClasses)
