@@ -305,12 +305,12 @@ What other kinds of sensors are there?
 
 
 #### More on Sensors in the near future
-
 Let's shift our focus, now, for a moment, to outputting a range of voltages. Then we'll put the input and output together to get real world input to control real world output.
 
+- see some additional Sensor Resources here: https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/using-a-pir-w-arduino
+
 ### Sensor ranges, calibration, and mapping
-- _coming soon._
-- useful Arduino functions for
+- useful Arduino functions
   - [map()](https://www.arduino.cc/reference/en/language/functions/math/map/)
   - [constrain()](https://www.arduino.cc/reference/en/language/functions/math/constrain/)
 
@@ -528,7 +528,7 @@ It's important to note that we are now using a separate power source for the mot
 
 - **Arduino Language Reference**
   - https://www.arduino.cc/reference/en/
-  
+
 - **Interfacing with Hardware**
  - [Interfacing with Hardware](http://playground.arduino.cc/Main/InterfacingWithHardware)
  - Joining inputs and outputs: switch controls speed, switch choses between two brightness levels, thermistor or other sensor changes behavior, etc.

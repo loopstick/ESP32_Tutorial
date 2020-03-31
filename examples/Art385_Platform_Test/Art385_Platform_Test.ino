@@ -20,6 +20,9 @@ int delaytime = 500;
 void setup(){
   Serial.begin(9600);
   
+  pinMode(POT, INPUT);
+  pinMode(LDR, INPUT);
+  
   pinMode(RedLED, OUTPUT);
   pinMode(GreenLED, OUTPUT);
   pinMode(BlueLED, OUTPUT);
