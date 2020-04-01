@@ -514,7 +514,6 @@ Use a transistor to control a higher current for a motor.
 You can test this with any of the code above for driving an LED, replacing the LED with the motor and transistor circuit.
 
 
-
 It's important to note that we are now using a separate power source for the motor. There are good reasons for doing so...
 
 
@@ -541,8 +540,8 @@ It's important to note that we are now using a separate power source for the mot
 ### Interfacing with Processing
   - [Arduino Virtual Color Mixer](https://www.arduino.cc/en/Tutorial/VirtualColorMixer) modified to work with the Art385 hardware platform:
     - ESP32 code - [Art385_ESP32toProcessing_ESP32.ino](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing_ESP32/Art385_ESP32toProcessing_ESP32.ino)
-    - Processing code - [Art385_ESP32toProcessing_Processing.pde](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing_Processing2/Art385_ESP32toProcessing_Processing.pde)
-    - .zip of the entire bundle - [Art385_ESP32toProcessing_Processing.zip](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing.zip)]
+    - Processing code - [Art385_ESP32toProcessing_Processing.pde](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing_Processing/Art385_ESP32toProcessing_Processing.pde)
+    - .zip of the entire bundle - [Art385_ESP32toProcessing_Processing.zip](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing.zip)
 
 
 ### Resources!!!
