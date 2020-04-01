@@ -538,8 +538,11 @@ It's important to note that we are now using a separate power source for the mot
 - **Making sounds** 
   - [Melody](https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/) tutorial
 
-- **Interfacing with Processing**
-  - [Arduino Virtual Color Mixer](https://www.arduino.cc/en/Tutorial/VirtualColorMixer)
+### Interfacing with Processing
+  - [Arduino Virtual Color Mixer](https://www.arduino.cc/en/Tutorial/VirtualColorMixer) modified to work with the Art385 hardware platform:
+    - ESP32 code - [Art385_ESP32toProcessing_ESP32.ino](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing_ESP32/Art385_ESP32toProcessing_ESP32.ino)
+    - Processing code - [Art385_ESP32toProcessing_Processing.pde](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing_Processing2/Art385_ESP32toProcessing_Processing.pde)
+    - .zip of the entire bundle - [Art385_ESP32toProcessing_Processing.zip](/examples/Art385_ESP32toProcessing/Art385_ESP32toProcessing.zip)]
 
 
 ### Resources!!!
