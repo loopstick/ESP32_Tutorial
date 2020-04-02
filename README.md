@@ -524,6 +524,12 @@ It's important to note that we are now using a separate power source for the mot
 
 
 ### More to explore
+- **Creating your own functions**
+  - Arduino Reference [Function Declaration](https://www.arduino.cc/en/Reference/FunctionDeclaration)
+  - Learn to Program [Arduino Functions](https://startingelectronics.org/software/arduino/learn-to-program-course/15-functions/)
+
+- **State Machine -> Switch...Case**
+  - Arduino Reference [switch...case](https://www.arduino.cc/reference/en/language/structure/control-structure/switchcase/)
 
 - **Arduino Language Reference**
   - https://www.arduino.cc/reference/en/
